@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.crudammi.R;
 
@@ -16,10 +17,10 @@ public class SingleChoiceDialogFragment extends DialogFragment {
 
     int position=0; //default selected position
 
-    String[] list;
+   // String[] list;
 
     public interface SingleChoiceListener{
-        void onPositivButtonClicked(String[] list,int position);
+        void onPositiveButtonClicked(String[] list,int position);
         void onNegativeButtonClicked();
     }
 
@@ -41,14 +42,31 @@ public class SingleChoiceDialogFragment extends DialogFragment {
 
         AlertDialog.Builder builder=new AlertDialog.Builder(getActivity());
 
-        //list=getActivity().getResources().getStringArray(R.array.lama_beraktivitas);
-        list = AktivitasfisikActivity.list;
+        final String[] list=getActivity().getResources().getStringArray(R.array.lama_beraktivitas   );
 
-        builder.setTitle("Select Lama Beraktivitas Anda")
-                .setSingleChoiceItems(list, position, (dialogInterface, i) -> position = i)
-                .setPositiveButton("OK", (dialogInterface, i) -> mListener.onPositivButtonClicked(list,position))
-                .setNegativeButton("Cancel", (dialogInterface, i) -> mListener.onNegativeButtonClicked());
+        builder.setTitle("Pilih Durasi Berolahraga")
+                .setSingleChoiceItems(list, position, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        position = i;
+                        Toast.makeText(getActivity(),"Durasi Berolahraga : "+list[i],Toast.LENGTH_SHORT).show();
 
+                    }
+                })
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        mListener.onPositiveButtonClicked(list,position);
+                        Toast.makeText(getActivity(),"Data Tersimpan",Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        mListener.onNegativeButtonClicked();
+                        Toast.makeText(getActivity(),"Keluar",Toast.LENGTH_SHORT).show();
+                    }
+                });
         return builder.create();
     }
 }

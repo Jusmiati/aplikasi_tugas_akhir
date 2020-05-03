@@ -10,6 +10,26 @@
     android:padding="20dp"
     tools:context=".ui.aktivitasfisik.AktivitasfisikActivity">
 
+    <Button
+        android:id="@+id/btnSelectChoice"
+        android:layout_width="322dp"
+        android:layout_height="80dp"
+        android:text="Durasi Berolaraga dalam seminggu" />
+
+    <Button
+        android:id="@+id/btnSelectChoicetwo"
+        android:layout_width="322dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:text="Lama Berolahraga perhari" />
+
+    <Button
+        android:id="@+id/btnSelectChoicethree"
+        android:layout_width="322dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:text="Hasil" />
+
     <TextView
         android:id="@+id/tvDisplayChoice"
         android:text="Aktivitas Anda"
@@ -18,11 +38,5 @@
         android:layout_margin="10dp"
         android:gravity="center"
         android:textSize="20sp" />
-
-    <Button
-        android:id="@+id/btnSelectChoice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Select Lama Beraktivitas" />
 
 </LinearLayout>
