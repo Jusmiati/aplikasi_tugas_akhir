@@ -42,7 +42,7 @@ public class DuoChoiceDialogFragment extends DialogFragment {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 position = i;
-                Toast.makeText(getActivity(),"Waktu Berolahraga : "+list[i],Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getActivity(),"Waktu Berolahraga : "+list[i],Toast.LENGTH_SHORT).show();
 
             }
         });

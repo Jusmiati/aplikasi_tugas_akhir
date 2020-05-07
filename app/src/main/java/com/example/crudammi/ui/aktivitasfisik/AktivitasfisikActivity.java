@@ -44,6 +44,7 @@ public class AktivitasfisikActivity extends AppCompatActivity implements SingleC
         tvLamaOlahraga = findViewById(R.id.tvLamaOlahraga);
         tvHasil = findViewById(R.id.tvHasil);
 
+
         //inisialisasi progress dialog sebelum dipanggil
 //        progressDialog = new ProgressDialog(this);
 //        progressDialog.setMessage("Mengidentifikasi jenis aktifitas...");
@@ -94,6 +95,7 @@ public class AktivitasfisikActivity extends AppCompatActivity implements SingleC
     public void onPositiveButtonClicked(String[] list, int position, boolean isSingleChoice) {
         if (isSingleChoice) {
             tvDurasi.setText("Durasi = " + list[position]);
+            tvHasil.setText("");
             //cek posisinya saja karena teks, harusnya angka saja klo mau perkalian
             //menghitung dari nol karena programmer :v
             if (position==0) {
@@ -105,6 +107,7 @@ public class AktivitasfisikActivity extends AppCompatActivity implements SingleC
             }
         } else {
             tvLamaOlahraga.setText("Lama = " + list[position]);
+            tvHasil.setText("");
             if (position==0) {
                 lamaOlahraga = 30;
             } else if (position==1) {
