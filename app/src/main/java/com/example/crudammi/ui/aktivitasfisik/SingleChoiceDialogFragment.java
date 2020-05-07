@@ -20,7 +20,7 @@ public class SingleChoiceDialogFragment extends DialogFragment {
    // String[] list;
 
     public interface SingleChoiceListener{
-        void onPositiveButtonClicked(String[] list,int position);
+        void onPositiveButtonClicked(String[] list,int position, boolean isSingleChoice);
         void onNegativeButtonClicked();
     }
 
@@ -56,7 +56,7 @@ public class SingleChoiceDialogFragment extends DialogFragment {
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        mListener.onPositiveButtonClicked(list,position);
+                        mListener.onPositiveButtonClicked(list,position, true);
                         Toast.makeText(getActivity(),"Data Tersimpan",Toast.LENGTH_SHORT).show();
                     }
                 })

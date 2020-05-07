@@ -25,56 +25,100 @@ import java.util.Arrays;
 
 public class AktivitasfisikActivity extends AppCompatActivity implements SingleChoiceDialogFragment.SingleChoiceListener {
 
-    private TextView tvDisplayChoice;
-   // public static String[] list;
+    private TextView tvDurasi;
+    private TextView tvLamaOlahraga;
+    private TextView tvHasil;
 
-  //  ProgressDialog progressDialog;
+    int durasiOlahraga;
+    int lamaOlahraga;
+    // public static String[] list;
+
+    //  ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aktivitasfisik);
 
-        tvDisplayChoice=findViewById(R.id.tvDisplayChoice);
+        tvDurasi = findViewById(R.id.tvDurasi);
+        tvLamaOlahraga = findViewById(R.id.tvLamaOlahraga);
+        tvHasil = findViewById(R.id.tvHasil);
 
         //inisialisasi progress dialog sebelum dipanggil
 //        progressDialog = new ProgressDialog(this);
 //        progressDialog.setMessage("Mengidentifikasi jenis aktifitas...");
 //        progressDialog.setCancelable(false);
 
-       // getAllInputAktifitas();
+        // getAllInputAktifitas();
 
-        Button btnSelectChoice=findViewById(R.id.btnSelectChoice);
+        Button btnSelectChoice = findViewById(R.id.btnSelectChoice);
         btnSelectChoice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DialogFragment singleChoiceDialog=new SingleChoiceDialogFragment();
+                DialogFragment singleChoiceDialog = new SingleChoiceDialogFragment();
                 singleChoiceDialog.setCancelable(false);
                 singleChoiceDialog.show(getSupportFragmentManager(), "Choice Dialog");
             }
         });
 
-        Button btnSelectChoicetwo=findViewById(R.id.btnSelectChoicetwo);
+        Button btnSelectChoicetwo = findViewById(R.id.btnSelectChoicetwo);
         btnSelectChoicetwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DialogFragment myDialog=new DuoChoiceDialogFragment();
+                DialogFragment myDialog = new DuoChoiceDialogFragment();
                 myDialog.setCancelable(false);
                 myDialog.show(getSupportFragmentManager(), "Choice Dialog");
+            }
+        });
+
+        Button btnHasil = findViewById(R.id.btnHasil);
+        btnHasil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int hasil = durasiOlahraga*lamaOlahraga;
+                String hasilRumus="";
+                if (hasil<=120) {
+                    hasilRumus = "Kurang dari 120 menit = anda kurang aktif";
+                } else if (hasil>120 && hasil<200) {
+                    hasilRumus = "120-200 menit = anda aktif";
+                } else if (hasil>200) {
+                    hasilRumus = "Lebih dari 200 menit = anda sangat aktif";
+                }
+                tvHasil.setText(hasilRumus);
             }
         });
 
     }
 
     @Override
-    public void onPositiveButtonClicked(String[] list, int position) {
-        tvDisplayChoice.setText("Select choice = " + list[position]);
+    public void onPositiveButtonClicked(String[] list, int position, boolean isSingleChoice) {
+        if (isSingleChoice) {
+            tvDurasi.setText("Durasi = " + list[position]);
+            //cek posisinya saja karena teks, harusnya angka saja klo mau perkalian
+            //menghitung dari nol karena programmer :v
+            if (position==0) {
+                durasiOlahraga = 1;
+            } else if (position==1) {
+                durasiOlahraga = 3;
+            } else if (position==2) {
+                durasiOlahraga = 4;
+            }
+        } else {
+            tvLamaOlahraga.setText("Lama = " + list[position]);
+            if (position==0) {
+                lamaOlahraga = 30;
+            } else if (position==1) {
+                lamaOlahraga = 45;
+            } else if (position==2) {
+                lamaOlahraga = 50;
+            }
+        }
         //getSingleKeteranganAktifitas(String.valueOf(idKeteranganAktifitas));
     }
 
     @Override
     public void onNegativeButtonClicked() {
-        tvDisplayChoice.setText("Select Item");
+        tvDurasi.setText("Select Item");
     }
 
 }

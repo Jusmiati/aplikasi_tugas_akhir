@@ -15,14 +15,9 @@ import androidx.fragment.app.DialogFragment;
 
 public class DuoChoiceDialogFragment extends DialogFragment {
 
-    int position=0; //default selected position
+    private int position=0; //default selected position
 
-    public interface MyDialog{
-        void onPositiveButtonClicked(String[] list, int position);
-        void onNegativeButtonClicked();
-    }
-
-    SingleChoiceDialogFragment.SingleChoiceListener mListener;
+    private SingleChoiceDialogFragment.SingleChoiceListener mListener;
 
     @Override
     public void onAttach(@NonNull Context context) {
@@ -54,7 +49,7 @@ public class DuoChoiceDialogFragment extends DialogFragment {
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                mListener.onPositiveButtonClicked(list,position);
+                mListener.onPositiveButtonClicked(list,position, false);
                 Toast.makeText(getActivity(),"Data Tersimpan",Toast.LENGTH_SHORT).show();
 
             }

@@ -9,19 +9,19 @@
     android:padding="50dp"
     tools:context=".ui.imt.ImtActivity">
 
-    <Button
-        android:visibility="gone"
-        android:id="@+id/btnwanita"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="wanita"/>
+<!--    <Button-->
+<!--        android:visibility="gone"-->
+<!--        android:id="@+id/btnwanita"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="wanita"/>-->
 
-    <Button
-        android:visibility="gone"
-        android:id="@+id/btnpria"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="pria" />
+<!--    <Button-->
+<!--        android:visibility="gone"-->
+<!--        android:id="@+id/btnpria"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="pria" />-->
 
     <EditText
         android:id="@+id/height"

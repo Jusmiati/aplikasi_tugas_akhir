@@ -24,19 +24,40 @@
         android:text="Lama Berolahraga perhari" />
 
     <Button
-        android:id="@+id/btnSelectChoicethree"
+        android:id="@+id/btnHasil"
         android:layout_width="322dp"
         android:layout_height="80dp"
         android:layout_marginTop="20dp"
         android:text="Hasil" />
 
     <TextView
-        android:id="@+id/tvDisplayChoice"
-        android:text="Aktivitas Anda"
+        android:id="@+id/tvDurasi"
+        android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:gravity="center"
         android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvLamaOlahraga"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/tvHasil"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textSize="20sp" />
+
+
 
 </LinearLayout>
