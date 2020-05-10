@@ -225,7 +225,7 @@
                           android:layout_height="wrap_content"
                           android:textStyle="bold"
                           android:layout_marginTop="10dp"
-                          android:text="Tingkat Stress"/>
+                          android:text="Skala Stress"/>
                       <View
                           android:layout_width="match_parent"
                           android:layout_height="1dp"
@@ -235,7 +235,7 @@
                           android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
                           android:gravity="center"
-                          android:text="Isi Biodata"
+                          android:text="Isi Skala Stress"
                           android:padding="5dp"
                           android:textColor="@android:color/darker_gray"/>
                   </LinearLayout>
