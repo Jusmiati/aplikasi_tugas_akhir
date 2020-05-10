@@ -63,7 +63,6 @@ public class DuoChoiceDialogFragment extends DialogFragment {
             }
         });
 
-
         return builder.create();
     }
 }

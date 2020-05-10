@@ -29,8 +29,8 @@ public class AktivitasfisikActivity extends AppCompatActivity implements SingleC
     private TextView tvLamaOlahraga;
     private TextView tvHasil;
 
-    int durasiOlahraga;
-    int lamaOlahraga;
+    int durasiOlahraga=0;
+    int lamaOlahraga=0;
     // public static String[] list;
 
     //  ProgressDialog progressDialog;
@@ -76,16 +76,24 @@ public class AktivitasfisikActivity extends AppCompatActivity implements SingleC
         btnHasil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int hasil = durasiOlahraga*lamaOlahraga;
-                String hasilRumus="";
-                if (hasil<=120) {
-                    hasilRumus = "Kurang dari 120 menit = anda kurang aktif";
-                } else if (hasil>120 && hasil<200) {
-                    hasilRumus = "120-200 menit = anda aktif";
-                } else if (hasil>200) {
-                    hasilRumus = "Lebih dari 200 menit = anda sangat aktif";
+                if (durasiOlahraga == 0) {
+                    Toast.makeText(AktivitasfisikActivity.this, "Pilih durasi olahraga terlebih dahulu!", Toast.LENGTH_SHORT).show();
+                    tvHasil.setText("");
+                } else if (lamaOlahraga == 0) {
+                    Toast.makeText(AktivitasfisikActivity.this, "Pilih lama olahraga terlebih dahulu!", Toast.LENGTH_SHORT).show();
+                    tvHasil.setText("");
+                } else {
+                    int hasil = durasiOlahraga * lamaOlahraga;
+                    String hasilRumus = "";
+                    if (hasil <= 120) {
+                        hasilRumus = "Kurang dari 120 menit = anda kurang aktif";
+                    } else if (hasil > 120 && hasil < 200) {
+                        hasilRumus = "120-200 menit = anda aktif";
+                    } else if (hasil > 200) {
+                        hasilRumus = "Lebih dari 200 menit = anda sangat aktif";
+                    }
+                    tvHasil.setText(hasilRumus);
                 }
-                tvHasil.setText(hasilRumus);
             }
         });
 
@@ -95,7 +103,7 @@ public class AktivitasfisikActivity extends AppCompatActivity implements SingleC
     public void onPositiveButtonClicked(String[] list, int position, boolean isSingleChoice) {
         if (isSingleChoice) {
             tvDurasi.setText("Durasi = " + list[position]);
-            tvHasil.setText("");
+          //  tvHasil.setText("");
             //cek posisinya saja karena teks, harusnya angka saja klo mau perkalian
             //menghitung dari nol karena programmer :v
             if (position==0) {
@@ -107,7 +115,7 @@ public class AktivitasfisikActivity extends AppCompatActivity implements SingleC
             }
         } else {
             tvLamaOlahraga.setText("Lama = " + list[position]);
-            tvHasil.setText("");
+           // tvHasil.setText("");
             if (position==0) {
                 lamaOlahraga = 30;
             } else if (position==1) {
