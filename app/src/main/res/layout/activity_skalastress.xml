@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:orientation="vertical"
+    tools:context=".ui.skalastress.SkalastressActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1. Sebulan terakhir, seberapa sering kamu kecewa karena sesuatu terjadi tidak seperti yang kamu duga? "
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <RadioGroup
+                    android:id="@+id/list_jawaban"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/opsi1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak pernah"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hampir tidak pernah"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kadang-kadang"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sering"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sangat Sering"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2. Sebulan terakhir, seberapa sering kamu merasa tidak berhasil mengendalikan hal-hal penting dalam hidupmu? "
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <RadioGroup
+                    android:id="@+id/list_jawaban1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/opsi6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak pernah"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hampir tidak pernah"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kadang-kadang"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sering"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sangat Sering"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3. Sebulan terakhir, seberapa sering kamu merasa gugup dan stress?  "
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <RadioGroup
+                    android:id="@+id/list_jawaban2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/opsi11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak pernah"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hampir tidak pernah"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kadang-kadang"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sering"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sangat Sering"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4. Sebulan terakhir, seberapa sering kamu merasa percaya diri untuk mengatasi masalah pribadimu? "
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <RadioGroup
+                    android:id="@+id/list_jawaban3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/opsi16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak pernah"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hampir tidak pernah"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kadang-kadang"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sering"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sangat Sering"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5. Sebulan terakhir, seberapa sering kamu merasa segala hal berjalan sesuai dengan harapanmu?  "
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <RadioGroup
+                    android:id="@+id/list_jawaban4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/opsi21"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak pernah"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hampir tidak pernah"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kadang-kadang"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sering"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi25"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sangat Sering"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="6. Sebulan terakhir, seberapa sering kamu merasa tidak dapat mengerjakan tugas mu?"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <RadioGroup
+                    android:id="@+id/list_jawaban5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/opsi26"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak pernah"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi27"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hampir tidak pernah"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi28"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kadang-kadang"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi29"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sering"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi30"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sangat Sering"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="7. Sebulan terakhir, seberapa sering kamu merasa dapat mengatasi kesedihan dalam kehidupanmu?"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <RadioGroup
+                    android:id="@+id/list_jawaban6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/opsi31"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak pernah"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi32"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hampir tidak pernah"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi33"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kadang-kadang"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi34"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sering"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi35"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sangat Sering"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="8. Sebulan terakhir, seberapa sering kamu merasa berhasil dalam pekerjaanmu? "
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <RadioGroup
+                    android:id="@+id/list_jawaban7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/opsi36"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak pernah"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi37"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hampir tidak pernah"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi38"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kadang-kadang"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi39"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sering"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi40"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sangat Sering"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="9. Sebulan terakhir, seberapa sering kamu marah akibat hal yang tidak dapat kamu kendalikan?  "
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <RadioGroup
+                    android:id="@+id/list_jawaban8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/opsi41"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak pernah"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi42"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hampir tidak pernah"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi43"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kadang-kadang"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi44"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sering"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi45"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sangat Sering"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10. Sebulan terakhir, seberapa sering kamu merasa memiliki banyak masalah dan kamu tidak mampu mengatasinya? "
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <RadioGroup
+                    android:id="@+id/list_jawaban9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/opsi46"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak pernah"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi47"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hampir tidak pernah"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi48"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kadang-kadang"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi49"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sering"/>
+
+                    <RadioButton
+                        android:id="@+id/opsi50"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sangat Sering"/>
+
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/hasil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hasil">
+                </Button>
+
+                <TextView
+                    android:id="@+id/hasiltv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+</LinearLayout>

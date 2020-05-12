@@ -9,16 +9,23 @@
         android:roundIcon="@drawable/ic_local_hospital_black_24dp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.riwayatpenyakit.Riwayatpenyakit"
-            android:label="Riwayat Penyakit"></activity>
-        <activity android:name=".ui.aktivitasfisik.AktivitasfisikActivity"
-            android:label="Aktivitas Fisik"/>
-        <activity android:name=".ui.imt.ImtActivity"
-            android:label="Indeks Massa Tubuh"/>
-        <activity android:name=".ui.user.AddUserAcitivty"
-            android:label="Tambah Data User"/>
-        <activity android:name=".ui.user.UserActivity"
-            android:label="Biodata User"/>
+        <activity android:name=".ui.skalastress.SkalastressActivity"></activity>
+        <activity android:name=".ui.skalastress.skalastress" />
+        <activity
+            android:name=".ui.riwayatpenyakit.Riwayatpenyakit"
+            android:label="Riwayat Penyakit" />
+        <activity
+            android:name=".ui.aktivitasfisik.AktivitasfisikActivity"
+            android:label="Aktivitas Fisik" />
+        <activity
+            android:name=".ui.imt.ImtActivity"
+            android:label="Indeks Massa Tubuh" />
+        <activity
+            android:name=".ui.user.AddUserAcitivty"
+            android:label="Tambah Data User" />
+        <activity
+            android:name=".ui.user.UserActivity"
+            android:label="Biodata User" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

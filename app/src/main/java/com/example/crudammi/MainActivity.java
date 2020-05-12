@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import com.example.crudammi.ui.aktivitasfisik.AktivitasfisikActivity;
 import com.example.crudammi.ui.imt.ImtActivity;
 import com.example.crudammi.ui.riwayatpenyakit.Riwayatpenyakit;
+import com.example.crudammi.ui.skalastress.SkalastressActivity;
 import com.example.crudammi.ui.user.UserActivity;
 
 
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     CardView imtButton;
     CardView riwayatpenyakitButton;
     CardView aktivitasfisikButton;
+    CardView skalastressButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,12 @@ public class MainActivity extends AppCompatActivity {
         aktivitasfisikButton = findViewById(R.id.menuKeteranganAktifitas);
         aktivitasfisikButton.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, AktivitasfisikActivity.class);
+            startActivity(intent);
+        });
+
+        skalastressButton = findViewById(R.id.menuJiwa);
+        skalastressButton.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, SkalastressActivity.class);
             startActivity(intent);
         });
     }
